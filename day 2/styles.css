@@ -1,0 +1,126 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background-color: #3FAF82;
+
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.top-strip, .middle-strip, .bottom-strip{
+	width: 90px;
+	height: 9px;
+	background-color: white;
+	border-radius: 10px;
+	margin: 20% 0;
+	box-shadow:  0 3px 30px 2px grey;
+	position: relative;
+}
+
+div.center:hover{
+	cursor: pointer;
+}
+
+
+
+/* KEYFRAMES FOR ANIMATIONS*/
+@keyframes bring-to-middle-top-strip{
+	0% { position: relative; top: 0px; transform: rotate(0deg); }
+	50% { position:relative; top: 27px; transform: rotate(0deg); }
+	100% {position: relative; top: 27px; transform: rotate(45deg);}
+}
+
+@keyframes bring-to-middle-bottom-strip{
+	0%{ position: relative ; bottom:0px; transform: rotate(0deg); }
+	50% {position: relative; bottom: 27px; transform: rotate(0deg);}
+	100%{ position: relative; bottom: 27px; transform: rotate(135deg);  }
+}
+
+@keyframes reduce-and-disappear{
+	0% { transform:scaleX(1); visibility: visible;}
+
+	100% { transform: scaleX(0); visibility: hidden; }
+
+}
+ /*reverse keyframes*/
+@keyframes reverse-bring-to-middle-top-strip{
+	100% { position: relative; top:0px; transform: rotate(0deg); }
+	50% { position:relative; top:27px;  transform: rotate(0deg); }
+	0% {position: relative; top: 27px; transform: rotate(45deg);}
+}
+
+@keyframes reverse-bring-to-middle-bottom-strip{
+	100%{ position: relative ; bottom:0px; transform: rotate(0deg); }
+	50% {position: relative; bottom:27px; transform: rotate(0deg);}
+	0%{ position: relative; bottom: 27px; transform: rotate(135deg);  }
+}
+
+@keyframes reverse-reduce-and-disappear{
+	100% { transform:scaleX(1); visibility: visible;}
+  50% {transform: scaleX(0); visibility: hidden;}
+	0% { transform: scaleX(0); visibility: hidden; }
+
+}
+
+
+/*ANIMATION EFFECTS*/
+.animation-top-strip{
+	animation-name: bring-to-middle-top-strip;
+	animation-duration: 1s;
+	animation-timing-function:linear;
+	animation-fill-mode: forwards;
+	}
+
+.animation-bottom-strip{
+	animation-name: bring-to-middle-bottom-strip;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+
+}
+
+.animation-middle-strip{
+	animation-name: reduce-and-disappear;
+	animation-duration: 0.3s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+
+
+/* reverse animation*/
+
+.reverse-animation-top-strip{
+	animation-name: reverse-bring-to-middle-top-strip;
+	animation-duration: 1s;
+	animation-timing-function:linear;
+
+	}
+
+.reverse-animation-bottom-strip{
+	animation-name: reverse-bring-to-middle-bottom-strip;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+
+
+}
+
+.reverse-animation-middle-strip{
+	animation-name: reverse-reduce-and-disappear;
+	animation-duration: 1.2s;
+	animation-timing-function: linear;
+
+}
