@@ -1,0 +1,93 @@
+/* delete the following line if no text is used*/
+/* edit the line if you wanna use other fonts*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/*use only the available space inside the 400x400 frame*/
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+  background-image:linear-gradient(45deg, #443fa1, #4dc0c8);
+	font-family: 'Courier New', 'Courier', sans-serif; /* got this from source code :P */
+}
+
+.center {
+  position: relative;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%,-50%);
+}
+
+
+.tiltedLineOf-1{
+	width:20px;
+	height:35px;
+	background-color:white;
+	border-radius:3px;
+	position:absolute;
+	left:-12px;
+	transform:rotate(45deg);
+}
+
+.straightLineOf-1{
+	width:20px;
+	height:100px;
+	background-color:white;
+	border-radius:3px;
+	box-shadow: -1px 0px 15px 2px  grey;
+	transform:rotate(180deg);
+	position:absolute;
+}
+
+
+.middle-zero{
+	width:60px;
+	height:60px;
+	border-style:solid;
+	border-color:white;
+	border-width:20px;
+	border-radius:50%;
+	position:relative;
+	left:12px;
+	z-index:-1;
+	box-shadow: 2px 0px 3px grey;
+
+	}
+
+
+.right-zero{
+	width:60px;
+	height:60px;
+	border-style:solid;
+	border-color:white;
+	border-width:20px;
+	border-radius:50%;
+	position:absolute;
+	left:100px;
+	z-index:-2;
+}
+
+.days{
+	margin: 0;
+  font-size:85px;
+	color:white;
+}
+
+h3{
+	margin:0px;
+	color:white;
+	letter-spacing:1px;
+}
